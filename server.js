@@ -27,9 +27,9 @@ app.set('view engine', 'handlebars');
 var routes = require('./controllers/burgers_controller.js');
 app.use('/', routes);
 
-// set up the Express Server (app) to listen using the 'process.env.PORT' value (aka, the one Heroku assigns, I assume) or PORT 8000
+// set up the Express Server (app) to listen using the 'process.env.PORT' value (for Heroku) or PORT 8000
 app.listen(process.env.PORT || 8000, function() {
-    console.log("server listening on port: " + process.env.PORT);
+    console.log("Server listening on port: " + process.env.PORT);
 });
 
 

@@ -1,0 +1,11 @@
+Error: Failed to lookup view "index" in views directory "C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\views"
+   at EventEmitter.render (C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\node_modules\express\lib\application.js:579:17)
+   at ServerResponse.render (C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\node_modules\express\lib\response.js:960:7)
+   at C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\controllers\burgers_controller.js:12:7
+   at C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\models\burger.js:7:4
+   at Query._callback (C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\config\orm.js:23:4)
+   at Query.Sequence.end (C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\node_modules\mysql\lib\protocol\sequences\Sequence.js:85:24)
+   at Query._handleFinalResultPacket (C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\node_modules\mysql\lib\protocol\sequences\Query.js:144:8)
+   at Query.EofPacket (C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\node_modules\mysql\lib\protocol\sequences\Query.js:128:8)
+   at Protocol._parsePacket (C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\node_modules\mysql\lib\protocol\Protocol.js:280:23)
+   at Parser.write (C:\Users\Juan Padilla\Desktop\Bootcamp\Week15\burger\node_modules\mysql\lib\protocol\Parser.js:74:12)

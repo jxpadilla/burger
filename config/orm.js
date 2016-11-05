@@ -3,7 +3,8 @@ Here is the O.R.M. where you write functions that takes inputs and conditions an
 */
 
 
-var connection = require('../config/connection.js');
+// var connection = require('../config/connection.js');
+var connection = require('./connection.js');
 
 // prints a question mark for each value being passed in inside the 'insertOne' method to prevent SQL injection
 function printQuestionMarks(num) {
