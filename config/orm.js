@@ -3,8 +3,7 @@ Here is the O.R.M. where you write functions that takes inputs and conditions an
 */
 
 
-// var connection = require('../config/connection.js');
-var connection = require('./connection.js');
+var connection = require('../config/connection.js');
 
 // prints a question mark for each value being passed in inside the 'insertOne' method to prevent SQL injection
 function printQuestionMarks(num) {
@@ -45,14 +44,25 @@ var orm = {
 	// 		cb(result);
 	// 	});
 	// },
-	insertOne: function(table, cols, vals, cb) {
-		var queryString = 'INSERT INTO ' + table + ' (' + cols + ') VALUES (' + printQuestionMarks(vals.length) + ') ';
-		connection.query(queryString, vals, function(err, result) {
-			console.log("rob: " + queryString);
-			if (err) throw err;
-			cb(result);
-		});
-	}
+	// insertOne: function(table, cols, vals, cb) {
+	// 	var queryString = 'INSERT INTO ' + table + ' (' + cols + ') VALUES (' + printQuestionMarks(vals.length) + ') ';
+	// 	connection.query(queryString, vals, function(err, result) {
+	// 		console.log("rob: " + queryString);
+	// 		if (err) throw err;
+	// 		cb(result);
+	// 	});
+	// }
+	insertOne: function(table, cols, vals, cb){
+			var queryString = "INSERT INTO " + table + " (" + cols.toString() + ") " + "VALUES (" + questionMarks(vals.length) + ") ";
+			console.log(cols);
+			connection.query(queryString, vals, function(err,result){
+				if (err) throw err;
+				cb(result);
+			});
+	},
+
+
+	
 }
 
 module.exports = orm;
